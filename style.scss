@@ -26,6 +26,13 @@ body {
     
     li {
         flex: 0;
+        &:last-child {
+            a {
+                @extend .pclass;
+                border: 1px solid #333333
+            }
+            
+        } 
     }
 
     a {
@@ -43,4 +50,8 @@ body {
             
         }
     }
+}
+
+.pclass {
+    background-color: #e7e7e7;
 }

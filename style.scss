@@ -1,8 +1,18 @@
+ 
+ //Sass
+ $font-family-default: Arial, sans-serif;
+ $primary-color: rgb(0, 0, 0);
+ $secondary-color: #ff0000;
+ $font-size-small: 18px;
+ 
+
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: $font-family-default;
     margin: 0;
     padding: 0;
   }
+
 
 .navbar {
 
@@ -21,15 +31,15 @@ body {
     a {
         display: block;
         background-color: white;
-        color: rgb(19, 3, 3);
+        color: $primary-color;
         text-align: center;
         padding: 14px;
         width: 100px;
         text-decoration: none;
-        font-size: 18px;
+        font-size: $font-size-small;
 
         &:hover {
-            color: #ff0000;
+            color: $secondary-color;
             
         }
     }

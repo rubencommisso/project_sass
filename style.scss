@@ -4,7 +4,7 @@
  $primary-color: rgb(0, 0, 0);
  $secondary-color: #ff0000;
  $font-size-small: 18px;
- 
+ $size-div: 66%;
 
 
 body {
@@ -54,4 +54,15 @@ body {
 
 .pclass {
     background-color: #e7e7e7;
+}
+
+.first {
+    background-color: blue;
+    padding: 50px;
+    width: calc(100% - #{$size-div});
+}
+
+.second {
+    padding: 50px;
+    background-color: greenyellow;
 }

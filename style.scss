@@ -2,20 +2,25 @@
  @use "font";
  
  @mixin navbar-tema {
-    background-color: $background-white;
-    color: $primary-color;
+    background-color: colors.$background-white;
+    color: colors.$primary-color;
         &:hover {
-            color: $secondary-color;
+            color: colors.$secondary-color;
         }
   
     @media (prefers-color-scheme: dark) {
       background-color: #000000;
-      color: $background-white;
+      color: colors.$background-white;
         &:hover {
             color: yellow;
         }
     }
   }
+
+  @function px-to-em($pixels, $context: 16) {
+    @return $pixels / $context * 1em;
+  }
+  
  
  $size-div: 66%;
 

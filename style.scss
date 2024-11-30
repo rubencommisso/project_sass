@@ -1,8 +1,22 @@
  @use "colors";
+ @use "font";
  
- //Sass
- $font-family-default: Arial, sans-serif;
- $font-size-small: 18px;
+ @mixin navbar-tema {
+    background-color: $background-white;
+    color: $primary-color;
+        &:hover {
+            color: $secondary-color;
+        }
+  
+    @media (prefers-color-scheme: dark) {
+      background-color: #000000;
+      color: $background-white;
+        &:hover {
+            color: yellow;
+        }
+    }
+  }
+ 
  $size-div: 66%;
 
 
@@ -14,7 +28,7 @@ body {
 
 
 .navbar {
-
+    @include navbar-tema;
     ul {
         list-style-type: none;
         margin: 0;
@@ -36,7 +50,7 @@ body {
 
     a {
         display: block;
-        background-color: white;
+        background-color: $background-white;
         color: $primary-color;
         text-align: center;
         padding: 14px;
